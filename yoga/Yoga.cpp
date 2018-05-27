@@ -453,7 +453,7 @@ void YGNodeRemoveChild(const YGNodeRef owner, const YGNodeRef excludedChild) {
     }
     YGNodeRef newChild = nullptr;
     if (cloneNodeCallback) {
-      newChild = cloneNodeCallback(oldChild, owner, nextInsertIndex);
+      newChild = cloneNodeCallback(owner->getConfig(), oldChild, owner, nextInsertIndex);
     }
     if (newChild == nullptr) {
       newChild = YGNodeClone(oldChild);

@@ -77,7 +77,7 @@ typedef int (*YGLogger)(
     const char* format,
     va_list args);
 typedef YGNodeRef (
-    *YGCloneNodeFunc)(YGNodeRef oldNode, YGNodeRef owner, int childIndex);
+    *YGCloneNodeFunc)(const YGConfigRef config, YGNodeRef oldNode, YGNodeRef owner, int childIndex);
 
 // YGNode
 WIN_EXPORT YGNodeRef YGNodeNew(void);

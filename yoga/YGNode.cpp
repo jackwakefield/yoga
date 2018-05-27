@@ -363,7 +363,7 @@ void YGNode::cloneChildrenIfNeeded() {
     const YGNodeRef oldChild = children_[i];
     YGNodeRef newChild = nullptr;
     if (cloneNodeCallback) {
-      newChild = cloneNodeCallback(oldChild, this, i);
+      newChild = cloneNodeCallback(config_, oldChild, this, i);
     }
     if (newChild == nullptr) {
       newChild = YGNodeClone(oldChild);
